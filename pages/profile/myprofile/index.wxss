@@ -1,0 +1,11 @@
+/* pages/profile/myprofile/index.wxss */
+.main {
+  margin-top: 28rpx;
+}
+.van-cell__title {
+  display: flex;
+  align-items: center;
+}
+.blue {
+  color:#1989fa
+}

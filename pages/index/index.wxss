@@ -1,0 +1,132 @@
+/* pages/basics/index.wxss */
+.search {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  background-color: #fff;
+  height: 108rpx;
+}
+
+.search_icon{
+  flex: 1;
+  padding: 5px 0;
+  background-color: transparent;
+}
+.search_input {
+  flex: 9;
+  padding: 5px 0;
+  color: #969799;
+}
+
+.search_content {
+  flex: 1;
+  display: flex;
+  padding-left: 12px;
+  background-color: #f7f8fa;
+  border-radius: 2px;
+}
+
+.chooseTimeBox .title {
+  font-size: 26rpx;
+  color: #95a5a6;
+  padding: 15rpx 30rpx 0;
+  display: inline-block;
+}
+
+.chooseTime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12rpx;
+}
+.chooseTime view {
+  flex: 1;
+  padding: 10rpx 0;
+  margin: 0 80rpx;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  color: #7f8c8d;
+} 
+
+.timeBtn {
+  text-align: center;
+  position: fixed;
+  right: 0;
+  top: 48%;
+  height: 75rpx;
+  width: 75rpx;
+  border-radius: 50%;
+  background-color: #eb4d4b;
+  color: #fff;
+  line-height: 75rpx;
+  border: 1px solid #eb4d4b;
+}
+.icon {
+  float: right;
+  padding: 15rpx 30rpx 0;
+  color: #95a5a6;
+}
+
+.container {
+  padding: 0 30rpx;
+  margin-top: 20rpx;
+}
+.container:first-child {
+  margin-top: 45rpx;
+}
+
+.area_item {
+  width: 100%;
+  height: 120rpx;
+  /* background-color: #ccc; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+.area_item  .area_info {
+  flex: 5;
+  overflow: hidden;
+}
+.area_item  .area_info .descri {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  margin-bottom: 15rpx;
+}
+.area_item .area_info .area_title {
+  padding-bottom: 10rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+}
+
+.order, .area_item .navigate {
+  font-size: 28rpx;
+  background-color: #2ecc71;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  height: 35px;
+  line-height: 35px;
+  width: 35px;
+  border: 1px solid #2ecc71;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.area_item .navigate {
+  margin: 0 18rpx;
+  background-color: #419dfb;
+  border: 1px solid #419dfb;
+}
+.parkNum {
+  font-size: 28rpx;
+  float: right;
+  font-weight: 300;
+  margin-right: 55rpx;
+  color: #419dfb;
+  padding-top: 8rpx;
+}

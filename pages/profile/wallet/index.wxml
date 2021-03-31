@@ -1,0 +1,13 @@
+<!--pages/profile/wallet/index.wxml-->
+<view class="wallet">
+  <image class="wallet_pic" src="https://oss.oreo5.cn/314eae95-89d3-4204-baf8-1e42ce2db267.png" mode="widthFix"></image>
+  <text class="money">￥0.00</text>
+</view>
+
+<view class="container">
+  <view class="item"><icon class="iconfont icon-qianbao1 licon"></icon>余额转出<icon style="float:right;" class="iconfont icon-youjiantou"></icon></view>
+  <view class="item"><icon class="iconfont icon-yinhangqia licon"></icon>我的银行卡<icon style="float:right;" class="iconfont icon-youjiantou"></icon></view>
+  <view class="item"><icon class="iconfont icon-zhangdan licon"></icon>账单<icon style="float:right;" class="iconfont icon-youjiantou"></icon></view>
+  <view class="item"><icon class="iconfont icon-mima licon"></icon>支付密码<icon style="float:right;" class="iconfont icon-youjiantou"></icon></view>
+  <view class="item"><icon class="iconfont icon-youhuiquan licon"></icon>优惠券<icon style="float:right;" class="iconfont icon-youjiantou"></icon></view>
+</view>

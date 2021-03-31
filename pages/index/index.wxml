@@ -1,0 +1,112 @@
+<!--pages/basics/index.wxml-->
+<view class="search" placeholder="请输入想搜索的小区" bindtap="goSearch">
+  <view class="search_content">
+    <view class="search_icon iconfont icon-sousuo"></view>
+    <view class="search_input">请输入想搜索的小区</view>
+  </view>
+</view>
+<!--地图容器-->
+<map id="myMap"
+   markers="{{markers}}"
+   style="width:100%;height:800px;z-index:1"
+   longitude="{{lng||longitude}}"
+   latitude="{{lat||latitude}}" 
+   scale='16'
+   show-location
+   bindcallouttap = "bindcallouttap"
+   bindmarkertap="markertap"
+   >
+</map>
+
+<!-- 小区popup -->
+<van-popup
+  z-index="888"
+  show="{{communityShow}}"
+   closeable
+  position="bottom"
+  custom-style="height: 40%"
+  bind:close="areaPopClose"
+  overlay="{{false}}"
+>
+<view class="container" wx:for="{{areaList}}" wx:key="id">  
+    <view class="area_item">
+      <view class="area_info">
+        <view class="area_title">{{item.title}}<text class="parkNum"><text class="iconfont icon-tingchewei1"></text>{{item.parkNum}}\200</text></view>
+        <view class="descri">{{item.name}}</view>
+      </view>
+      <!-- <view class="park_num"><text class="leftNum">车位剩余量<text decode="true">&nbsp;&nbsp;</text>{{item.parkNum}}</text></view> -->
+      <view class="navigate" type="info" bindtap="navigate">导航</view>
+      <view class="order" bindtap="goReserve" data-communityId="{{item.id}}" data-communityAddress="{{item.name}}"
+      data-communityName="{{item.title}}" data-reserveStartTime="{{reserveStartTime}}"
+      data-reserveEndTime="{{reserveEndTime}}" data-userId="{{userInfo.id}}">预约</view>
+    </view>
+  </view>
+</van-popup>
+
+
+<!-- 时间picker -->
+<van-popup
+  z-index="999"
+  show="{{!popupShow}}"
+  round
+  position="bottom"
+  custom-style="height: 12%"
+  overlay="{{false}}"
+>
+
+  <view class="chooseTimeBox" style="z-index:999">
+    <view class="title">选择您的预约时间</view>
+    <van-icon class="icon" name="cross" bindtap="timePickerClose" />
+    <view class="chooseTime">
+      <view class="chooseItem" bindtap="handleStartTimePickerShow">{{startTime||'开始时间'}}</view>
+      <view class="chooseItem" bindtap="handleEndTimePickerShow">{{endTime||'结束时间'}}</view>
+    </view>
+  </view>
+</van-popup>
+
+
+
+<!-- 开始时间picker -->
+<van-popup
+  z-index="1000"
+  show="{{ showStartTimePicker }}"
+  round
+  position="bottom"
+  custom-style="height: 45%"
+  bind:close="onStartTimePickerClose">
+  <van-datetime-picker
+  type="time"
+  value="{{ currentDate }}"
+  min-hour="{{ minHour }}"
+  max-hour="{{ maxHour }}"
+  bind:input="onStartInput"
+  title="选择时间"
+  filter="{{ filter }}"
+  bind:confirm="onStartTimePickerConfirm"
+  bind:cancel="onStartTimePickerCancel"
+/>
+</van-popup>
+
+<!-- 结束时间picker -->
+<van-popup
+  z-index="1000"
+  show="{{ showEndTimePicker }}"
+  round
+  position="bottom"
+  custom-style="height: 45%"
+  bind:close="onEndTimePickerClose">
+  <van-datetime-picker
+  type="time"
+  value="{{ minEndHour +':00'}}"
+  min-hour="{{ minEndHour }}"
+  max-hour="{{ maxHour }}"
+  bind:input="onEndInput"
+  title="选择时间"
+  filter="{{ filter }}"
+  bind:confirm="onEndTimePickerConfirm"
+  bind:cancel="onEndTimePickerCancel"
+/>
+</van-popup>
+
+<view class="timeBtn" wx:if="{{popupShow}}" style="z-index:999" bindtap="handlePopupShow">预约</view>
+<van-toast id="van-toast" />

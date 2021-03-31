@@ -1,0 +1,14 @@
+.search_cards{
+    margin-top: 6%;
+}
+.order_img {
+    position: relative;
+    -webkit-flex: none;
+    flex: none;
+    width: 88px;
+    width: 88px;
+    height: 88px;
+    height: 88px;
+    margin-right: 8px;
+    margin-right: 8px;
+  }

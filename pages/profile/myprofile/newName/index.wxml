@@ -1,0 +1,15 @@
+<!--pages/profile/myprofile/newName/index.wxml-->
+<view style="margin-top:28rpx">
+	<van-field
+	value="{{ value }}"
+	placeholder="请输入昵称"
+	border="{{ false }}"
+	bind:change="onChange"
+	/>
+	<view style="margin-top:10px;text-align:center">
+		<button 
+		bindtap="doneChange"
+		style="width:250rpx;color:#323233;background-color:#fff;border:none;font-size:14px;padding:0 15px;height:44px;line-height:44px">确认</button>
+	</view>
+	<van-toast id="van-toast" />
+</view>

@@ -1,0 +1,48 @@
+Page {
+  background-color: #eaeef1;
+  padding-bottom: 48px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 400rpx;
+}
+.title {
+  font-weight: 600;
+  font-size: 38rpx;
+}
+.pt {
+  padding-top: 48rpx;
+}
+.descri {
+  color: #7f8c8d;
+  padding-bottom: 14rpx;
+}
+
+.btn_box {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.btn {
+  width: 700rpx;
+  background-color: #1989fa;
+  border: 1px solid #1989fa;
+  color: #fff;
+  font-size: 28rpx;
+  border-radius: 999rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-weight: 600;
+}

@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "van-panel": "@vant/weapp/panel/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-collapse": "@vant/weapp/collapse/index",
+    "van-collapse-item": "@vant/weapp/collapse-item/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index"
+  }
+}

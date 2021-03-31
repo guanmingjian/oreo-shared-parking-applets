@@ -1,0 +1,29 @@
+<!-- 搜索框 -->
+<van-search value="{{ value }}" input-align="center" placeholder="请输入搜索关键词" bind:search="onSearch" />
+<view class="btn_box">
+  <button class="btn" bindtap="goUpload">添加车位信息</button>
+</view>
+<van-collapse value="{{ activeNames }}" bind:change="onChange1">
+  <van-collapse-item title="A067" name="1">
+    <van-cell-group>
+          <van-cell center title="车位开关">
+            <van-switch checked="{{ checked }}" slot="right-icon" bind:change="onChange" size="24px"/>
+          </van-cell>
+          <van-cell title="省份" value="广东省" />
+          <van-cell title="城市" value="广州市" />
+          <van-cell title="小区名字" value="金燕花苑" />
+          <van-cell title="小区地址" value="广州市天河区粤垦路189号" />
+        </van-cell-group>
+  </van-collapse-item>
+  <van-collapse-item title="A068" name="2">
+    <van-cell-group>
+          <van-cell center title="车位开关">
+            <van-switch checked="{{ checked }}" slot="right-icon" bind:change="onChange" size="24px"/>
+          </van-cell>
+          <van-cell title="省份" value="{{}}" />
+          <van-cell title="城市" value="{{}}" />
+          <van-cell title="小区名字" value="{{}}" />
+          <van-cell title="小区地址" label="{{sub_card.communityAddress}}" />
+        </van-cell-group>
+  </van-collapse-item>
+</van-collapse>

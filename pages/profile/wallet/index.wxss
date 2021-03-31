@@ -1,0 +1,41 @@
+page {
+  background-color: #eaeef1;
+}
+
+.wallet {
+  height: 500rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.money {
+  padding: 25rpx 0;
+  font-weight: 600;
+  font-size: 60rpx;
+}
+
+.wallet_pic {
+  width: 280rpx;
+  height: 280rpx;
+  margin-right: -30rpx;
+}
+
+.container {
+  margin-top: 20rpx;
+  padding: 30rpx;
+  background-color: #fff;
+}
+.container .item {
+  padding: 25rpx 18rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.container .item:last-child{
+  border-bottom: none;
+}
+.licon {
+  font-size: 40rpx;
+  padding-right: 15rpx;
+}

@@ -1,0 +1,6 @@
+<!--pages/profile/setting/index.wxml-->
+<van-cell icon="replay" title="退出登录" size="large" is-link bindtap="unLogin"/>
+<van-cell icon="records" title="修改密码" size="large" is-link bindtap="changePass"/>
+
+
+<van-toast id="van-toast" />

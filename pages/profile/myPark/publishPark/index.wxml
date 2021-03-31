@@ -1,0 +1,49 @@
+<!--pages/profile/myPark/publishPark/index.wxml-->
+<van-cell-group>
+  <van-field
+    value="{{  }}"
+    type="textarea"
+    label="停车位编号"
+    placeholder="请输入停车位编号"
+    autosize
+    border="{{ false }}"
+  />
+  <van-field
+    value="{{  }}"
+    type="textarea"
+    label="省份"
+    placeholder="请输入省份"
+    autosize
+    border="{{ false }}"
+  />
+  <van-field
+    value="{{  }}"
+    type="textarea"
+    label="城市"
+    placeholder="请输入城市"
+    autosize
+    border="{{ false }}"
+  />
+  <van-field
+    value="{{  }}"
+    type="textarea"
+    label="小区名字"
+    placeholder="请输入小区名字"
+    autosize
+    border="{{ false }}"
+  />
+  <van-field
+    value="{{  }}"
+    type="textarea"
+    label="小区地址"
+    placeholder="请输入小区地址"
+    autosize
+    border="{{ false }}"
+  />
+</van-cell-group>
+
+<view class="btn">
+  <van-button round="true">取消</van-button>
+  <van-button type="info" round="true">确定</van-button>
+</view>
+    

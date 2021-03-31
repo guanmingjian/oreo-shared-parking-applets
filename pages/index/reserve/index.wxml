@@ -1,0 +1,40 @@
+<view class="viewcolor">
+    <van-panel title="预约信息" status="" use-footer-slot>
+        <view slot="footer">
+            <!-- 小区图片展示 -->
+            <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
+                duration="{{duration}}">
+                <block>
+                    <swiper-item>
+                        <image src="https://oss.oreo5.cn/81b50266-3e67-4c00-8ecd-27e5c9ecc0a4.jpg" class="slide-image" />
+                    </swiper-item>
+                </block>
+            </swiper>
+            <van-cell-group>
+                <van-cell title="小区名称" value="{{communityName}}" />
+                <van-cell title="小区地址" value="{{communityAddress}}" />
+                <van-cell title="入场时间" value="{{reServestartTime}}" />
+                <van-cell title="出场时间" value="{{reServeEndtime}}" />
+                <!-- <van-grid>
+                <van-grid-item icon="photo-o" text="车牌号1" />
+                <van-grid-item icon="photo-o" text="车牌号2" />
+                <van-grid-item icon="photo-o" text="车牌号3" />
+                <van-grid-item icon="photo-o" text="车牌号4" />
+            </van-grid> -->
+                <!-- 上拉菜单，显示不出来，也可做停车位选择 -->
+                <!-- <van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect"/> -->
+                <van-cell title="保证金金额" value="{{order_detail.orderPrice}}" />
+                <van-collapse value="{{ activeNames }}" bind:change="onChange">
+                    <van-collapse-item title="收费标准" name="1">
+                        2元/30分钟，不足30分钟按30分钟收费
+                    </van-collapse-item>
+                    <van-collapse-item title="服务须知" name="2">
+                        服务须知服务须知服务须知服务须知
+                    </van-collapse-item>
+                </van-collapse>
+            </van-cell-group>
+        </view>
+    </van-panel>
+    
+</view>
+<van-submit-bar price="{{ 1500 }}" button-text="立即预约" bind:submit="onSubmit" />

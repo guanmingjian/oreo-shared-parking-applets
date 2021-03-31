@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-notify": "@vant/weapp/notify/index"
+  },
+  "navigationBarTitleText": "实名认证"
+}

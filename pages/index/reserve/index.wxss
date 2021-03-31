@@ -1,0 +1,4 @@
+/* pages/index/reserve/index.wxss */
+.viewcolor {
+  margin-bottom: 50px;
+}

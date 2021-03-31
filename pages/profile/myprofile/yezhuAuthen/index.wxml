@@ -1,0 +1,79 @@
+<view class="bar">
+  <view class="area" bindtap="showPopup">{{area[2].name || '地区选择'}}<icon class="iconfont icon-below-s" ></icon></view>
+    <van-search
+    class="search_input"
+      value="{{ value }}"
+      placeholder="请输入需要搜索的小区名称"
+      bind:search="onSearch"
+      bind:cancel="onCancel"
+      bind:change="onChange"
+      use-action-slot
+    >
+      <view slot="action" bind:tap="onClick">搜索</view>
+    </van-search>
+    <!-- <view class="search_name_list"></view> -->
+</view>
+
+<view class="showList" wx:if="{{listShow}}">
+  <view class="showItem" wx:for="{{getList}}" wx:key="uid">
+    <view class="content">
+      <view class="name">{{item.name}}</view>
+      <view class="addr"><text class="iconfont icon-Frame1"></text>{{item.province+item.city+item.area+item.address}}</view>
+    </view>
+    <view bindtap="choose" data-name="{{item.name}}" class="icon"><text class="iconfont icon-daohang"></text>选择</view>
+  </view>
+</view>
+
+
+<van-popup
+  show="{{ show }}"
+  position="bottom"
+  custom-style="height: 45%;"
+  bind:close="onClose"
+  bind:onC
+>
+  <van-area
+    area-list="{{ areaList }}"
+    columns-placeholder="{{ ['请选择', '请选择', '请选择'] }}"
+    bind:confirm="onConfirm"
+    bind:cancel="areaCancel"
+  />
+</van-popup>
+
+<block wx:if="{{!listShow}}">
+<view class="main">
+  <text class="title">作为业主，您可以开启车位共享</text>
+  <text class="descri pt">您需要上传的信息如下：</text>
+</view>
+<view class="container">
+    <van-cell-group>
+      <van-field
+        placeholder="请在上方选择"
+        border="{{ false }}"
+        label="小区名字"
+        value="{{communityName}}"
+        disabled
+      />
+      <van-field
+        placeholder="请输入产权人名字"
+        border="{{ false }}"
+        bind:change="onNameChange"
+        label="产权人名字"
+      />
+      <van-field
+        placeholder="请输入停车位编号"
+        border="{{ false }}"
+        bind:change="onCarhange"
+        label="停车位编号"
+      />
+      <view class="upload">
+        <text>证明材料</text>
+        <view><button class="uploadBtn">上传图片</button></view>
+      </view>
+    </van-cell-group>
+</view>
+</block>
+
+<view class="btn_box">
+  <button class="btn" bindtap="goUpload">立即认证</button>
+</view>

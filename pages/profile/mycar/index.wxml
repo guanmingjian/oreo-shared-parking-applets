@@ -1,0 +1,32 @@
+<!--pages/profile/mycar/index.wxml-->
+<view class="main">
+  
+  <view class="card blue"  wx:for="{{carList}}" wx:key="unique">
+    <view class="content">
+      <van-icon name="ellipsis" class="backBtn" size="25px" bind:click="remove" data-index="{{index}}"/>
+      {{item.carNumber}}
+    </view>
+  </view>
+
+  <view class="card" bindtap="add">
+    <view class="add">
+      <van-icon name="plus" size="40px" color="#f1f2f6"/>
+      <view class="text">
+    上传行驶证正面添加车牌
+  </view>
+    </view>
+  </view>
+
+
+  <van-action-sheet
+  show="{{ show }}"
+  actions="{{ actions }}"
+  cancel-text="取消"
+  bind:close="onClose"
+  bind:select="onSelect"
+  bind:cancel="cancel"
+  />
+</view>
+
+<van-notify id="van-notify" />
+<van-dialog id="van-dialog" />

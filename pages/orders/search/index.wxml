@@ -1,0 +1,25 @@
+<view>搜索结果</view>
+<view wx:for="{{ordercarts}}" class="carts-container,search_cards" wx:key="id">
+<van-card
+          bindtap="goOdt"
+          data-id="{{item.id}}"
+        >
+        <view slot="title" class="title_addr">
+          <view>{{item.communityName}}</view>
+        </view>
+        <view slot="thumb">
+            <image wx:if="{{item.communityPhotoList[0].photoUrl!=null}}" class="order_img" src="{{item.communityPhotoList[0].photoUrl}}"></image>
+            <image wx:else="{{item.communityPhotoList[0].photoUrl==null}}" class="order_img" src="https://oss.oreo5.cn/b4c4ffcd-71ab-4c61-b0c3-be8cea85ddb7.jpg"></image>
+        </view>
+        <view slot="desc" class="desc_num">
+          <view>车位编号：{{item.carNumber}}</view>
+          <view>小区地址：{{item.communityAddress}}</view>
+        </view>
+        <view slot="footer">
+          <van-count-down time="{{ time }}" bind:finish="cancel" />
+        </view>
+        <view slot="bottom">
+          <van-stepper value="{{ 1 }}" bind:change="onChange" />
+        </view>
+</van-card>
+</view>

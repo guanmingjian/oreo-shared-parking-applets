@@ -1,0 +1,40 @@
+<view class="viewcolor">
+    <van-panel title="订单详情" status="" use-footer-slot>
+      <view slot="footer">
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{imgUrls}}">
+          <swiper-item>
+          <image src="{{item.photoUrl}}" class="slide-image" />
+          </swiper-item>
+          </block>
+        </swiper>
+        <van-cell-group>
+          <van-steps
+            steps="{{ steps }}"
+            active="{{ active }}"
+            active-icon="success"
+            active-color="#38f"
+            />
+            
+          <van-cell title="订单序列号" value="{{order_detail.orderSn}}" />
+          <!-- <van-cell title="预约入场时间" value="{{{{order_detail.communityName}}}}" />
+          <van-cell title="最迟入场时间" value="{{order_detail.communityName}}" /> -->
+          <!-- <van-cell title="预约出场时间" value="{{order_detail.communityName}}" /> -->
+          <van-cell title="入场时间" value="{{order_detail.enterTime}}" />
+          <van-cell title="出场时间" value="{{order_detail.leaveTime}}" />
+          <!-- <van-cell title="预约状态" value="{{order_detail.communityName}}" /> -->
+          <van-cell title="小区名字" value="{{order_detail.communityName}}" />
+          <van-cell title="停车位编号" value="{{order_detail.parkingSn}}" />
+          <van-cell title="小区地址" value="{{order_detail.communityName}}" />
+          <view wx:if="{{order_detail.payStatus==1}}"><van-cell title="支付状态" value="未支付" /></view>
+          <view wx:elif="{{order_detail.payStatus==2}}"><van-cell title="支付状态" value="已支付" /></view>
+          <view wx:else><van-cell title="支付状态" value="已退款" /></view>
+          <view wx:if="{{order_detail.payTime!=none}}"><van-cell title="支付时间" value="{{order_detail.payTime}}" /></view>
+          <view wx:else></view>
+          <van-cell title="保证金" value="{{order_detail.orderPrice}}" />
+          <view wx:if="{{order_detail.actualPrice!=none}}"><van-cell title="订单实付" value="{{order_detail.actualPrice}}" /></view>
+          <view wx:else></view>
+        </van-cell-group>
+      </view>
+    </van-panel>
+</view>

@@ -1,0 +1,58 @@
+<!--pages/profile/myprofile/index.wxml-->
+<view class="main">
+  <van-cell title="头像" is-link center>
+    <view>
+      <van-uploader
+        file-list="{{ fileList }}"
+        accept="media"
+        use-before-read
+        bind:before-read="beforeRead"
+        bind:after-read="afterRead"
+        max-count="1"
+      >
+        <van-image
+          round fit="cover"
+          width="3rem"
+          height="3rem"
+          src="{{userInfo.avatarUrl || 'https://img.yzcdn.cn/vant/cat.jpeg'}}"
+        />
+      </van-uploader>
+    </view>
+  </van-cell>
+  
+  <van-cell title="昵称" is-link link-type="navigateTo"
+  url="/pages/profile/myprofile/newName/index?id={{userInfo.id}}" >
+    <view>
+      <text style="color:#000">{{userInfo.userName||'还没有设置昵称哦'}}</text>
+    </view>
+  </van-cell>
+  <van-cell title="绑定手机号" is-link>
+    <view>
+      <text>{{showNum}}</text>
+    </view>
+  </van-cell>
+  <van-cell title="性别" is-link bind:click="showPopup">
+    <view>
+      <text class="{{gender? '':'blue'}}">{{gender||"待完善"}}</text>
+    </view>
+  </van-cell>
+
+  <van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+    <van-picker bind:change="onChange" default-index="{{ 1 }}" columns="{{ columns }}" />
+  </van-popup>
+  
+  <van-cell value="" is-link url="/pages/profile/myprofile/realAuthen/index">
+    <view slot="title">
+      <view class="van-cell-text">实名认证</view>
+    </view>
+    <view>
+      <van-button icon="contact" size='mini' plain type="primary" wx:if="{{userInfo.infoCode==1}}">已认证</van-button>
+      <van-button icon="contact" size='mini' plain type="info" wx:else>未认证</van-button>
+    </view>
+  </van-cell>
+  <van-cell title="业主认证" is-link url="/pages/profile/myprofile/yezhuAuthen/index">
+    <view></view>
+  </van-cell>
+</view>
+
+<van-notify id="van-notify" />

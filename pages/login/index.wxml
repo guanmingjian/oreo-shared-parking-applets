@@ -1,0 +1,29 @@
+<view class="login">
+		<view class="title">{{title}}</view>
+		<form class="box1">
+			<view class="input">
+				<image src="../../static/sj.png"></image>
+				<input bindinput="handleTel" data-name="phoneNumber" placeholder="请输入手机号"/>
+			</view>
+			<view class="input">
+				<image src="../../static/yz.png"></image>
+				<input bindinput="handleCaptcha" data-name="captcha"captcha name="code" placeholder="请输入验证码" wx:if="{{isShow}}"/>
+				<button class="sendBtn" disabled="{{codeBtn.waitingCode}}" wx:if="{{isShow}}" bindtap="sendCode" style="background: {{codeBtn.color}};">{{codeBtn.text}}</button>
+        <input bindinput="handlePass" type="password" name="password" placeholder="请输入密码" wx:if="{{!isShow}}"/>
+			</view>
+			<view class="tips"><text wx:if="{{isShow}}">未注册的手机号验证后将自动注册</text></view>
+			<button form-type="submit" bindtap="goLogin" wx:if="{{isShow}}">立即登录</button>
+			<button form-type="submit" bindtap="passLogin" wx:else>立即登录</button>
+		</form>
+		<view class="contract"><text style="color:#666" bindtap="changeLogin">{{isShow?'使用密码登录':'短信验证码登录'}}</text> | <text>忘记密码？</text></view>
+		<view class="loginMethod box1">
+		    <view class="icon">
+				<image src="../../static/wx.png"></image>
+				<view>微信</view>
+		    </view>
+		    <view class="icon">
+		        <image src="../../static/qq.png"></image>
+		        <view>QQ</view>
+		    </view>
+		</view>
+	</view>

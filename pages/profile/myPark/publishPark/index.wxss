@@ -1,0 +1,4 @@
+/* pages/profile/myPark/publishPark/index.wxss */
+.btn{
+  text-align: right;
+}

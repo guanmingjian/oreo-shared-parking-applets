@@ -1,0 +1,45 @@
+/* pages/profile/index.wxss */
+
+.my-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 250rpx;
+}
+
+.login-btn {
+  width: 400rpx;
+}
+
+.my-bar{
+  padding-top: 15rpx;
+  padding-left: 2mm;
+  line-height:30px;
+}
+
+.version {
+  text-align: center;
+  margin: 64rpx;
+  color: #666;
+  font-size: 26rpx;
+}
+
+.userCard {
+  height: 220rpx;
+  background-color: #fff;
+  display: flex;
+  padding: 25px 0 0 25px;
+}
+.profileCard {
+  padding: 20px;
+}
+.userName {
+  font-size: 40rpx;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 6px;
+}
+.userId {
+  font-size: 30rpx;
+}

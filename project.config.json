@@ -1,0 +1,133 @@
+{
+    "description": "项目配置文件",
+    "packOptions": {
+        "ignore": []
+    },
+    "setting": {
+        "urlCheck": false,
+        "es6": true,
+        "enhance": false,
+        "postcss": true,
+        "preloadBackgroundData": false,
+        "minified": true,
+        "newFeature": false,
+        "coverView": true,
+        "nodeModules": true,
+        "autoAudits": false,
+        "showShadowRootInWxmlPanel": true,
+        "scopeDataCheck": false,
+        "uglifyFileName": false,
+        "checkInvalidKey": true,
+        "checkSiteMap": true,
+        "uploadWithSourceMap": true,
+        "compileHotReLoad": false,
+        "useMultiFrameRuntime": true,
+        "useApiHook": true,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        },
+        "bundle": false,
+        "useIsolateContext": true,
+        "useCompilerModule": false,
+        "userConfirmedUseCompilerModuleSwitch": false,
+        "userConfirmedBundleSwitch": false,
+        "packNpmManually": false,
+        "packNpmRelationList": [],
+        "minifyWXSS": true,
+        "useApiHostProcess": true
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.14.0",
+    "appid": "wx9aa111b512e29f06",
+    "projectname": "vantSharePark",
+    "debugOptions": {
+        "hidedInDevtools": []
+    },
+    "scripts": {},
+    "isGameTourist": false,
+    "simulatorType": "wechat",
+    "simulatorPluginLibVersion": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "id": -1,
+                    "name": "pages/test/index",
+                    "pathName": "pages/test/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "登录",
+                    "pathName": "pages/login/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 2,
+                    "name": "我的",
+                    "pathName": "pages/profile/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "个人信息",
+                    "pathName": "pages/profile/myprofile/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 4,
+                    "name": "实名认证",
+                    "pathName": "pages/profile/myprofile/realAuthen/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 5,
+                    "name": "修改昵称",
+                    "pathName": "pages/profile/myprofile/newName/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "我的车辆",
+                    "pathName": "pages/profile/mycar/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "地图",
+                    "pathName": "pages/basics/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "修改密码",
+                    "pathName": "pages/profile/setting/changePass/index",
+                    "query": "id=1323460350756311041",
+                    "scene": null
+                },
+                {
+                    "name": "订单",
+                    "pathName": "pages/orders/index",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

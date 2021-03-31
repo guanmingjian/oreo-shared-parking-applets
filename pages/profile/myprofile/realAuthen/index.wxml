@@ -1,0 +1,47 @@
+<!--pages/profile/myprofile/realAuthen/index.wxml-->
+<view class="main">
+  <view class="upload">
+    <van-button color='{{color}}' loading='{{uploading}}' loading-text="上传认证中..." icon="photo" disabled="{{userInfo.infoCode==1}}" bind:click="fontSide" class="item">{{message}}</van-button>
+  </view>
+
+  <view class="info">
+    <van-cell-group>
+    <van-field
+      value="{{ showInfo.realName }}"
+      readonly
+      label="姓名"
+      placeholder='{{showInfo.realName||"上传证件自动识别姓名"}}'
+    />
+    <van-field
+      value="{{ showInfo.idCard }}"
+      readonly
+      label="证件号"
+      placeholder='{{showInfo.idCard||"上传证件自动识别证件号"}}'
+    />
+    <van-field
+      value="{{ showInfo.address }}"
+      readonly
+      label="地址"
+      placeholder='{{showInfo.address||"上传证件自动识别地址"}}'
+    />
+    <van-field
+      value="{{ showInfo.gender }}"
+      readonly
+      label="性别"
+      placeholder='{{showInfo.gender||"上传证件自动识别性别"}}'
+    />
+    <van-field
+      value="{{ showInfo.born }}"
+      readonly
+      label="生日"
+      placeholder='{{showInfo.born||"上传证件自动识别生日"}}'
+    />
+
+  </van-cell-group>
+  </view>
+  <!-- <view style="padding:25px 13px;" wx:if="{{userInfo.infoCode==0}}">
+    <van-button color='#0984e3' size="large" bindtap="sendUrl">提交</van-button>
+  </view> -->
+</view>
+<van-notify id="custom-selector" />
+

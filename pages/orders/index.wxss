@@ -1,0 +1,28 @@
+.van-card {
+   background-color: rgba(236, 235, 238, 0.979);
+   border: rgb(255, 255, 255) solid;
+}
+.delete {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 100%;
+ }
+ .title_addr{
+    font-size: 17px;
+    font-weight: 500;
+ }
+ .order_img {
+   position: relative;
+   -webkit-flex: none;
+   flex: none;
+   width: 92px;
+   width: 92px;
+   height: 92px;
+   height: 92px;
+   margin-right: 12px;
+   margin-right: 12px;
+ }
+ .desc_num{
+   line-height: 22px;
+ }

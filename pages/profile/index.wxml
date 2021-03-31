@@ -1,0 +1,72 @@
+<view class="my-box" wx:if="{{!loginState}}">
+  <view class="login-btn">
+    <van-button type="default" block bind:click="goLogin" >立即登录</van-button>
+  </view>
+</view>
+<view class="userCard" wx:else bindtap="toMyProfile">
+  <van-image
+    round
+    width="5rem"
+    height="5rem"
+    src="{{userInfo.avatarUrl || 'https://img.yzcdn.cn/vant/cat.jpeg'}}"
+    fit="cover"
+  />
+  <view class="profileCard">
+    <text class="userName">{{userInfo.userName}} \n</text>
+    <text class="userId">手机号:{{showNum}}</text>
+  </view>
+</view>
+
+<view class="my-bar">
+  <van-cell is-link size="large" bindtap="goUserInfo">
+    <view slot="title">
+      <van-icon class="iconfont icon-user"></van-icon>
+      <van-tag class="my-bar">个人信息</van-tag>
+    </view>
+  </van-cell>
+  <van-cell is-link size="large" bindtap="goMyCar">
+    <view slot="title">
+      <van-icon class="iconfont icon-car"></van-icon>
+      <van-tag class="my-bar">我的车辆</van-tag>
+    </view>
+  </van-cell>
+  <van-cell wx:if="{{userInfo.userType==2}}" is-link size="large" url="/pages/profile/myPark/index" bind:click="scanOrderCode">
+    <view slot="title">
+      <van-icon class="iconfont icon-tingchewei1"></van-icon>
+      <van-tag class="my-bar">车位管理</van-tag>
+    </view>
+  </van-cell>
+  <van-cell is-link size="large" bindtap="goOrder">
+    <view slot="title">
+      <van-icon class="iconfont icon-dingdan"></van-icon>
+      <van-tag class="my-bar">我的订单</van-tag>
+    </view>
+  </van-cell>
+  <van-cell is-link size="large" bindtap="goWallet">
+    <view slot="title">
+      <van-icon class="iconfont icon-qianbao"></van-icon>
+      <van-tag class="my-bar">我的钱包</van-tag>
+    </view>
+  </van-cell>
+  <van-cell is-link size="large" url="/pages/profile/payment/index">
+    <view slot="title">
+      <van-icon class="iconfont icon-zhifu"></van-icon>
+      <van-tag class="my-bar">无感支付</van-tag>
+    </view>
+  </van-cell>
+  <van-cell is-link size="large" url="/pages/profile/setting/index">
+    <view slot="title">
+      <van-icon name="setting-o"></van-icon>
+      <van-tag class="my-bar">设置</van-tag>
+    </view>
+  </van-cell>
+  <van-cell is-link size="large" url="/pages/profile/about/index">
+    <view slot="title">
+      <van-icon name="info-o"></van-icon>
+      <van-tag class="my-bar">关于我们</van-tag>
+    </view>
+  </van-cell>
+</view>
+<view class="version">v 1.0.0</view>
+
+<van-toast id="van-toast" />

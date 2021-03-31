@@ -1,0 +1,56 @@
+<!--pages/test/index.wxml-->
+<!-- <input placeholder="请输入手机号" bindinput="handleinput" data-name="phoneNum" model:value="{{phoneNum}}"></input>
+<button bindtap="getApi">测试</button> -->
+
+
+<!-- 
+<van-popup
+  show="{{ show }}"
+  round
+  position="bottom"
+  custom-style="height: 45%"
+  bind:close="onClose">
+  <van-picker columns="{{ columns }}" bind:change="onChange"
+show-toolbar title="选择时间" />
+
+</van-popup> -->
+
+<van-popup
+  show="{{ show }}"
+  round
+  position="bottom"
+  custom-style="height: 45%"
+  bind:close="onClose">
+  <van-datetime-picker
+  type="time"
+  value="{{ currentDate }}"
+  min-hour="{{ minHour }}"
+  max-hour="{{ maxHour }}"
+  bind:input="onInput"
+  title="选择时间"
+  filter="{{ filter }}"
+  bind:confirm="onConfirm"
+  bind:cancel="onCancel"
+/>
+
+</van-popup>
+
+
+
+<button bindtap="handleShow">Picker</button>
+<button bindtap="handleShow">DatePicker</button>
+
+<map id="myMap"
+   markers="{{markers}}"
+   style="width:100%;height:800px;z-index:1"
+   longitude="110.9471"
+   latitude="22.35429" 
+   scale='16'
+   show-location
+   >
+   <cover-view slot="callout">
+    <cover-view marker-id="0"></cover-view>
+    <cover-view marker-id="1"></cover-view>
+   </cover-view>
+</map>
+

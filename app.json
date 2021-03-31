@@ -1,0 +1,71 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/reserve/index",
+    "pages/index/search/index",
+    "pages/login/index",
+    "pages/test/index",
+    "pages/orders/index",
+    "pages/orders/suborder/index",
+    "pages/orders/search/index",
+    "pages/profile/index",
+    "pages/profile/myPark/index",
+    "pages/profile/myPark/publishPark/index",
+    "pages/profile/myprofile/index",
+    "pages/profile/myprofile/newName/index",
+    "pages/profile/myprofile/realAuthen/index",
+    "pages/profile/myprofile/yezhuAuthen/index",
+    "pages/profile/myprofile/yezhuAuthen/goAuthen/index",
+    "pages/profile/wallet/index",
+    "pages/profile/mycar/index",
+    "pages/profile/payment/index",
+    "pages/profile/setting/index",
+    "pages/profile/about/index",
+    "pages/profile/setting/changePass/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "共享停车",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "plugins": {
+    "routePlan": {
+      "version": "1.0.8",
+      "provider": "wx50b5593e81dd937a"
+      }
+  },
+  "permission": {
+    "scope.userLocation": {
+    "desc": "你的位置信息将用于小程序定位"
+    }
+  },
+
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#1989fa",
+    "borderStyle": "white",
+    "list":[
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "selectedIconPath":"/images/tabbar/basics_cur.png",
+        "iconPath": "/images/tabbar/basics.png"
+      },
+      {
+          "pagePath": "pages/orders/index",
+          "text": "订单",
+          "selectedIconPath":"/images/tabbar/orders_cur.png",
+        "iconPath": "/images/tabbar/orders.png"
+      },
+      {
+          "pagePath": "pages/profile/index",
+          "text": "我的",
+          "selectedIconPath":"/images/tabbar/profile_cur.png",
+        "iconPath": "/images/tabbar/profile.png"
+      }
+  ]
+
+  }
+}

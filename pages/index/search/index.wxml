@@ -1,0 +1,38 @@
+<view class="bar">
+  <view class="area" bindtap="showPopup">{{area[2].name || '地区选择'}}<icon class="iconfont icon-below-s" ></icon></view>
+    <van-search
+    class="search_input"
+      value="{{ value }}"
+      placeholder="请输入搜索关键词"
+      bind:search="onSearch"
+      bind:cancel="onCancel"
+      bind:change="onChange"
+      use-action-slot
+    >
+      <view slot="action" bind:tap="onClick">搜索</view>
+    </van-search>
+</view>
+
+<van-popup
+  show="{{ show }}"
+  position="bottom"
+  custom-style="height: 45%;"
+  bind:close="onClose"
+>
+  <van-area
+    area-list="{{ areaList }}"
+    columns-placeholder="{{ ['请选择', '请选择', '请选择'] }}"
+    bind:confirm="onConfirm"
+    bind:cancel="areaCancel"
+  />
+</van-popup>
+
+<view class="showList">
+  <view class="showItem" wx:for="{{getList}}" wx:key="uid">
+    <view class="content">
+      <view class="name">{{item.name}}</view>
+      <view class="addr"><text class="iconfont icon-Frame1"></text>{{item.province+item.city+item.area+item.address}}</view>
+    </view>
+    <view bindtap="toIndex" data-lat="{{item.location.lat}}" data-currentName="{{item.name}}" data-lng="{{item.location.lng}}" class="icon"><text class="iconfont icon-daohang"></text>选择</view>
+  </view>
+</view>

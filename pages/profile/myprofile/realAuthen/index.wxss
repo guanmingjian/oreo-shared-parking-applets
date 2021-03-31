@@ -1,0 +1,29 @@
+/* pages/profile/myprofile/realAuthen/index.wxss */
+.main {
+  margin-top: 28rpx;
+  background-color: #fff;
+  height: 725px;
+}
+
+
+.upload {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload .item {
+  padding: 10px;
+}
+
+.info {
+  padding: 10px 13px;
+}
+.info .van-field__label {
+  border-right: 1px solid #dfe6e9;
+}
+
+.van-field__label {
+  color: #000;
+}
